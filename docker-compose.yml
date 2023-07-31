@@ -7,7 +7,6 @@ services:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
       - POSTGRES_DB
-      - POSGRES_PORT
 
   flyway:
     image: flyway/flyway:7.7.0

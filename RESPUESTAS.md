@@ -24,6 +24,6 @@ Revisa el contenido del archivo `docker-compose.yml`.
 
 ## ETAPA 2
 
-Escribe respuestas de la etapa 2 acá
+¿Qué pasa si cambias el nombre del servicio de `postgres` a `db`? ¿Qué otros cambios tendrías que hacer?
 
-...
+**R**: Al cambiar el nombre del servicio `postgres` por `db` también se debiese cambiar el nombre de la dependencia del servicio `flyway`, ya que esta última está relacionada con `postgres`. Adicionalmente, se debe modificar el valor de la variable `POSTGRES_SERVER` encontrada en el archivo `.env`.
