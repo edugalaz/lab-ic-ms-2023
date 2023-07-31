@@ -45,3 +45,18 @@ Revisa el archivo `docker-compose.yml`.
 ¿Qué crees que hace el atributo `context` debajo de `build` (está en la linea 6 del archivo `docker-compose.yml`)?
 
 **R**: Ejecuta la ruta del directorio `./movies-api` donde se encuentra el `Dockerfile` con las instrucciones de una imagen personalizada.
+
+## ETAPA 4
+
+Compara los archivos `Dockerfile` de `movies-api` y `movies-front`. 
+
+¿Cuál es la diferencia? 
+
+**R**: Los lenguajes utilizados son muy distintos. Por lo cual, conllevan a que se deban realizar distintos pasos. 
+El frontend (`movies-front`) solo requiere compilar sin necesidad de crear un binario o que se deba desplegar. En cambio, el backend (`movies-api`) requiere construirse y desplegarse. 
+
+Compara el atributo `build` del servicio `movies-api` con el de `movies-front`. 
+
+¿Qué pasa si los dejas iguales?
+
+**R**: No habría problemas, ya que ambas formas son correctas para llamar a ruta que contiene el `Dockerfile`.
