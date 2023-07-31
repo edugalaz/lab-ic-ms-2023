@@ -27,3 +27,21 @@ Revisa el contenido del archivo `docker-compose.yml`.
 ¿Qué pasa si cambias el nombre del servicio de `postgres` a `db`? ¿Qué otros cambios tendrías que hacer?
 
 **R**: Al cambiar el nombre del servicio `postgres` por `db` también se debiese cambiar el nombre de la dependencia del servicio `flyway`, ya que esta última está relacionada con `postgres`. Adicionalmente, se debe modificar el valor de la variable `POSTGRES_SERVER` encontrada en el archivo `.env`.
+
+## ETAPA 3
+
+Revisa el archivo `movies-api/Dockerfile`.
+
+¿Qué te llama la atención?
+
+**R**: Que posee las instrucciones para compilar y desplegar la aplicación `movies-api`. Para la compilación utiliza Go, mientras que para el despliegue utiliza Debian.
+
+Revisa el archivo `docker-compose.yml`.
+
+¿Cómo se relacionan el archivo `docker-compose.yml` y el archivo `movies-api/Dockerfile`?
+
+**R**: Se relacionan a partir del servicio `movies-api` declarado en `docker-compose.yml`, ya que dicho servicio utiliza las instrucciones de `movies-api/Dockerfile` para crear una imagen personalizada.
+
+¿Qué crees que hace el atributo `context` debajo de `build` (está en la linea 6 del archivo `docker-compose.yml`)?
+
+**R**: Ejecuta la ruta del directorio `./movies-api` donde se encuentra el `Dockerfile` con las instrucciones de una imagen personalizada.
